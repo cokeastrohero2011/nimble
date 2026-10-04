@@ -1,0 +1,83 @@
+.practice-areas {
+  margin-top: 42px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+}
+
+.practice-areas .section-heading {
+  margin-bottom: 20px;
+}
+.practice-areas h2 {
+  margin: 3px 0 0;
+  font-size: clamp(26px, 4vw, 38px);
+}
+.preset-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.preset-row button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  padding: 8px 15px;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.preset-row button:hover {
+  border-color: var(--accent);
+  color: var(--foreground);
+}
+.drill-toggle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+.drill-toggle-grid button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--muted);
+  padding: 10px 13px;
+  font: inherit;
+  text-align: left;
+}
+.drill-toggle-grid button.selected {
+  border-color: var(--accent);
+  color: var(--foreground);
+}
+.drill-toggle-grid button > span {
+  width: 17px;
+  height: 17px;
+  display: grid;
+  place-items: center;
+}
+.drill-toggle-grid svg {
+  width: 15px;
+  height: 15px;
+  color: var(--accent);
+}
+.mode-pill {
+  max-width: 520px;
+  line-height: 1.8;
+}
+
+@media (max-width: 620px) {
+  .practice-areas {
+    padding: 22px;
+  }
+  .drill-toggle-grid {
+    grid-template-columns: 1fr;
+  }
+  .preset-row {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "nimble",
+  "account_id": "bf148488cd21637feca4d72692c11e62",
+  "main": "vinext/server/fetch-handler",
+  "compatibility_date": "2026-08-28",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "dist/client",
+    "binding": "ASSETS",
+    "not_found_handling": "none",
+  },
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.01,
+    },
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "nimble-db",
+      "database_id": "463441cf-1433-48d0-862f-cc89c414b9ae",
+      "migrations_dir": "migrations",
+    },
+  ],
+}
